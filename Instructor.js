@@ -1,6 +1,7 @@
 var Instructor = function(){
   this.instructors = [];
   this.Courses = require('./Courses.json');
+  this.getInstructorMap();
 }
 
 // creates a hash for faster searching

@@ -1,6 +1,7 @@
 var Area = function(){
   this.areas = [];
   this.Courses = require('./Courses.json');
+  this.getAreaMap();
 };
 
 Area.prototype.getAreaMap = function(){
