@@ -1,0 +1,7 @@
+The included JSON file is an object that contains courses that are keyed to a unique ID. Each course contains a terms object and within that each term contains an array of instructors. Using Node.JS, write an API with two routes. One route that returns only the courses that had been taught by a particular instructor for any term and one route that returns all courses taught in a specific area. API routes should follow the convention
+http://localhost:port/courses/instructor/:name
+http://localhost:port/courses/area/:area
+so that
+
+http://localhost:port/courses/instructor/na returns all courses taught by anyone whose name includes 'na'. This should be case insensitive
+http://localhost:port/courses/area/CS returns all courses taught with a course_area of 'CS'
