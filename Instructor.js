@@ -4,7 +4,12 @@ var Instructor = function(){
   this.getInstructorMap();
 }
 
-// creates a hash for faster searching
+/**
+ * Creates a hash for faster searching
+ *
+ * example: [{"name": "Alabaster Abernathy", "course_ids": [1, 2, 3, 4]},
+ *          {"name": "Boris Bosley", "course_ids": [5, 6, 7]}]
+ */
 Instructor.prototype.getInstructorMap = function(){
   var that = this;
 
@@ -38,7 +43,6 @@ Instructor.prototype.getInstructorMap = function(){
       }
     });
   });
-  //console.log(that.instructors);
   return that.instructors;
 };
 

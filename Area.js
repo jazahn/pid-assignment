@@ -4,6 +4,12 @@ var Area = function(){
   this.getAreaMap();
 };
 
+/**
+ * Creates a hash for faster searching
+ *
+ * example: [{"name": "AB", "course_ids": [1, 2, 3, 4]},
+ *          {"name": "CD", "course_ids": [5, 6, 7]}]
+ */
 Area.prototype.getAreaMap = function(){
   var that = this;
 

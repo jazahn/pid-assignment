@@ -2,13 +2,22 @@ var Course = function(){
 
 };
 
+/**
+ * Gets the courses given an array of course_ids
+ * Returns an array of courses
+ *
+ * example @param course_ids: [1, 2, 3]
+ * example @return: [{"1": ...course data...}, {"2": ...course data...}, ...]
+ */
 Course.prototype.getCourses = function(course_ids){
   allCourses = require('./Courses.json');
 
   if(course_ids === undefined){
-    return allCourses;
+    return Object.keys(allCourses).map(function(course_id){
+      return allCourses[course_id];
+    });
   } else {
-    var courses = Object.keys(allCourses).map(function(course_id){
+    return Object.keys(allCourses).map(function(course_id){
       if(course_ids.indexOf(course_id) != -1){
         return allCourses[course_id];
       }
@@ -17,11 +26,8 @@ Course.prototype.getCourses = function(course_ids){
         return true;
       }
     });
-
-    return courses;
   }
 
 };
-
 
 module.exports = new Course();
