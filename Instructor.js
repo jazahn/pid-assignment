@@ -1,5 +1,7 @@
 var Instructor = function(){
+  // the poor man's cache
   this.instructors = [];
+  
   this.Courses = require('./Courses.json');
   this.getInstructorMap();
 }

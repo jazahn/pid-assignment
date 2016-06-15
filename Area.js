@@ -1,5 +1,7 @@
 var Area = function(){
+  // the poor man's cache
   this.areas = [];
+  
   this.Courses = require('./Courses.json');
   this.getAreaMap();
 };
